@@ -10,7 +10,7 @@
         .header { background: linear-gradient(135deg, #1a3a6b 0%, #4a90d9 100%); color: #fff; padding: 30px 20px; text-align: center; }
         .header-inner { max-width: 900px; margin: 0 auto; display: flex; align-items: center; justify-content: center; gap: 20px; }
         .logo-area { flex-shrink: 0; background: #fff; border-radius: 12px; padding: 8px 10px; display: flex; align-items: center; justify-content: center; }
-        .logo-area svg { width: 72px; height: 62px; }
+        .logo-area img { width: 80px; height: 80px; object-fit: contain; }
         .header-text h1 { font-size: 20px; font-weight: 600; letter-spacing: 2px; }
         .header-text p { font-size: 13px; opacity: 0.85; margin-top: 4px; letter-spacing: 1px; }
         .banner { background: linear-gradient(135deg, #1a3a6b 0%, #2d6cb5 50%, #4a90d9 100%); color: #fff; text-align: center; padding: 40px 20px; position: relative; overflow: hidden; }
@@ -85,20 +85,7 @@
 <header class="header">
     <div class="header-inner">
         <div class="logo-area">
-            <svg viewBox="0 0 100 85" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                    <linearGradient id="znGrad" x1="0.1" y1="0" x2="0.9" y2="1">
-                        <stop offset="0%"   stop-color="#5DC8F5"/>
-                        <stop offset="35%"  stop-color="#3A9AE0"/>
-                        <stop offset="70%"  stop-color="#2468C0"/>
-                        <stop offset="100%" stop-color="#1A3566"/>
-                    </linearGradient>
-                </defs>
-                <!-- Upper piece -->
-                <path d="M14,4 L87,4 L84,21 L64,21 L24,54 L9,54 Z" fill="url(#znGrad)"/>
-                <!-- Lower piece -->
-                <path d="M9,61 L24,61 L64,28 L84,28 L81,75 L7,75 Z" fill="url(#znGrad)"/>
-            </svg>
+            <img src="logo.png" alt="知宁技术 Logo">
         </div>
         <div class="header-text">
             <h1>宁波知宁技术服务有限公司</h1>
