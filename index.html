@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026年度宁波市"科创甬江2035"重点研发计划项目申报通知 - 宁波知宁技术服务有限公司</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            color: #333;
+            background: #f5f7fa;
+            line-height: 1.7;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #1a3a6b 0%, #4a90d9 100%);
+            color: #fff;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .header-inner {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .logo-area {
+            flex-shrink: 0;
+        }
+
+        .logo-area img {
+            width: 70px;
+            height: 70px;
+            border-radius: 12px;
+            background: #fff;
+            padding: 6px;
+            object-fit: contain;
+        }
+
+        /* SVG Logo Fallback */
+        .logo-svg {
+            width: 70px;
+            height: 70px;
+            border-radius: 12px;
+            background: #fff;
+            padding: 6px;
+        }
+
+        .header-text h1 {
+            font-size: 20px;
+            font-weight: 600;
+            letter-spacing: 2px;
+        }
+
+        .header-text p {
+            font-size: 13px;
+            opacity: 0.85;
+            margin-top: 4px;
+            letter-spacing: 1px;
+        }
+
+        /* Banner */
+        .banner {
+            background: linear-gradient(135deg, #1a3a6b 0%, #2d6cb5 50%, #4a90d9 100%);
+            color: #fff;
+            text-align: center;
+            padding: 40px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .banner::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 60%);
+        }
+
+        .banner h2 {
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 1.5;
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .banner .source {
+            font-size: 13px;
+            opacity: 0.75;
+            margin-top: 12px;
+            position: relative;
+        }
+
+        /* Container */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+
+        /* Quick Info Cards */
+        .quick-cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 14px;
+            margin: -30px auto 30px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .quick-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            text-align: center;
+            transition: transform 0.2s;
+        }
+
+        .quick-card:hover {
+            transform: translateY(-2px);
+        }
+
+        .quick-card .icon {
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+
+        .quick-card .label {
+            font-size: 12px;
+            color: #888;
+            margin-bottom: 4px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .quick-card .value {
+            font-size: 16px;
+            font-weight: 700;
+            color: #1a3a6b;
+        }
+
+        .quick-card .value.highlight {
+            color: #e74c3c;
+        }
+
+        /* Section */
+        .section {
+            background: #fff;
+            border-radius: 12px;
+            padding: 28px 24px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+        }
+
+        .section-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #1a3a6b;
+            margin-bottom: 18px;
+            padding-left: 14px;
+            border-left: 4px solid #4a90d9;
+            line-height: 1.4;
+        }
+
+        /* Category Cards */
+        .category-cards {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+        }
+
+        .cat-card {
+            border: 1px solid #e8eef5;
+            border-radius: 10px;
+            padding: 18px 20px;
+            background: linear-gradient(135deg, #f8faff 0%, #fff 100%);
+            transition: border-color 0.2s;
+        }
+
+        .cat-card:hover {
+            border-color: #4a90d9;
+        }
+
+        .cat-card h4 {
+            font-size: 15px;
+            color: #1a3a6b;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .cat-tag {
+            display: inline-block;
+            font-size: 11px;
+            background: linear-gradient(135deg, #4a90d9, #1a3a6b);
+            color: #fff;
+            padding: 2px 10px;
+            border-radius: 20px;
+            font-weight: 400;
+        }
+
+        .cat-card p {
+            font-size: 13px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Requirement Blocks */
+        .req-block {
+            margin-bottom: 20px;
+        }
+
+        .req-block:last-child {
+            margin-bottom: 0;
+        }
+
+        .req-block h4 {
+            font-size: 15px;
+            color: #2d6cb5;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .req-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .req-list li {
+            position: relative;
+            padding: 8px 0 8px 24px;
+            font-size: 14px;
+            color: #444;
+            border-bottom: 1px dashed #eee;
+        }
+
+        .req-list li:last-child {
+            border-bottom: none;
+        }
+
+        .req-list li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 15px;
+            width: 8px;
+            height: 8px;
+            background: #4a90d9;
+            border-radius: 50%;
+        }
+
+        .req-list li strong {
+            color: #1a3a6b;
+        }
+
+        .req-list li.warn {
+            color: #c0392b;
+            font-weight: 500;
+        }
+
+        .req-list li.warn::before {
+            background: #e74c3c;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding: 10px 0;
+        }
+
+        .timeline::before {
+            content: "";
+            position: absolute;
+            left: 20px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(180deg, #4a90d9, #1a3a6b);
+            border-radius: 2px;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding: 0 0 24px 52px;
+        }
+
+        .timeline-item:last-child {
+            padding-bottom: 0;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 12px;
+            top: 2px;
+            width: 19px;
+            height: 19px;
+            background: #fff;
+            border: 3px solid #4a90d9;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .timeline-item.active .timeline-dot {
+            background: #4a90d9;
+            box-shadow: 0 0 0 4px rgba(74, 144, 217, 0.2);
+        }
+
+        .timeline-title {
+            font-size: 15px;
+            font-weight: 600;
+            color: #1a3a6b;
+            margin-bottom: 4px;
+        }
+
+        .timeline-date {
+            font-size: 12px;
+            color: #e74c3c;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .timeline-desc {
+            font-size: 13px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Fund Grid */
+        .fund-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+        }
+
+        .fund-item {
+            background: #f8faff;
+            border-radius: 8px;
+            padding: 16px 18px;
+            border-left: 3px solid #4a90d9;
+        }
+
+        .fund-item h4 {
+            font-size: 14px;
+            color: #1a3a6b;
+            margin-bottom: 6px;
+        }
+
+        .fund-item p {
+            font-size: 13px;
+            color: #555;
+        }
+
+        /* Contact Section */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        .contact-item {
+            background: #f8faff;
+            border-radius: 10px;
+            padding: 16px;
+            text-align: center;
+        }
+
+        .contact-item .c-label {
+            font-size: 13px;
+            color: #888;
+            margin-bottom: 6px;
+        }
+
+        .contact-item .c-name {
+            font-size: 14px;
+            color: #333;
+            font-weight: 500;
+            margin-bottom: 4px;
+        }
+
+        .contact-item .c-phone {
+            font-size: 16px;
+            color: #1a3a6b;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        /* CTA */
+        .cta-section {
+            background: linear-gradient(135deg, #1a3a6b 0%, #4a90d9 100%);
+            border-radius: 12px;
+            padding: 32px 24px;
+            text-align: center;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .cta-section h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .cta-section p {
+            font-size: 14px;
+            opacity: 0.9;
+            margin-bottom: 6px;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 24px 20px;
+            color: #999;
+            font-size: 12px;
+        }
+
+        .footer .company {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 4px;
+        }
+
+        /* Note box */
+        .note-box {
+            background: #fffbf0;
+            border: 1px solid #ffe0a0;
+            border-radius: 8px;
+            padding: 14px 16px;
+            margin-top: 14px;
+            font-size: 13px;
+            color: #8a6d3b;
+            line-height: 1.6;
+        }
+
+        .note-box strong {
+            color: #c0392b;
+        }
+
+        /* Badge */
+        .badge {
+            display: inline-block;
+            font-size: 11px;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+            margin-left: 6px;
+        }
+
+        .badge-red {
+            background: #fde8e8;
+            color: #e74c3c;
+        }
+
+        .badge-blue {
+            background: #e8f0fd;
+            color: #2d6cb5;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .header-inner {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .banner h2 {
+                font-size: 18px;
+            }
+
+            .quick-cards {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+            }
+
+            .quick-card .value {
+                font-size: 14px;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section {
+                padding: 20px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+    <div class="header-inner">
+        <div class="logo-area">
+            <img src="assets/logo.png" alt="知宁技术 Logo" onerror="this.onerror=null;this.src='assets/logo.svg'">
+        </div>
+        <div class="header-text">
+            <h1>宁波知宁技术服务有限公司</h1>
+            <p>ZHINING &mdash; 专业政策申报服务</p>
+        </div>
+    </div>
+</header>
+
+<!-- Banner -->
+<div class="banner">
+    <h2>2026年度第一批宁波市<br>"科创甬江2035"重点研发计划<br>项目申报通知 &middot; 简明解读</h2>
+    <p class="source">来源：宁波市科学技术局 &nbsp;|&nbsp; 发布日期：2026年4月13日</p>
+</div>
+
+<!-- Quick Info Cards -->
+<div class="container">
+    <div class="quick-cards">
+        <div class="quick-card">
+            <div class="icon">&#128197;</div>
+            <div class="label">申报截止时间</div>
+            <div class="value highlight">5月11日 17:00</div>
+        </div>
+        <div class="quick-card">
+            <div class="icon">&#128218;</div>
+            <div class="label">支持类别</div>
+            <div class="value">3个类别</div>
+        </div>
+        <div class="quick-card">
+            <div class="icon">&#128187;</div>
+            <div class="label">申报入口</div>
+            <div class="value">宁波科技大脑</div>
+        </div>
+        <div class="quick-card">
+            <div class="icon">&#9202;</div>
+            <div class="label">项目执行期</div>
+            <div class="value">一般不超过3年</div>
+        </div>
+    </div>
+
+    <!-- Category Section -->
+    <div class="section">
+        <h3 class="section-title">申报类别一览</h3>
+        <div class="category-cards">
+            <div class="cat-card">
+                <h4><span class="cat-tag">类别一</span> 人工智能和大数据</h4>
+                <p>围绕人工智能和大数据领域关键核心技术攻关，采用竞争性分配方式。</p>
+            </div>
+            <div class="cat-card">
+                <h4><span class="cat-tag">类别二</span> 产业集成攻关</h4>
+                <p>试点探索<strong>"先立项、后补助"</strong>方式，根据项目中期检查情况确定首笔财政资金拨付比例。</p>
+            </div>
+            <div class="cat-card">
+                <h4><span class="cat-tag">类别三</span> 定向委托</h4>
+                <p>定向委托农产品质量安全全国重点实验室和宁波市技术创新中心组织实施。</p>
+            </div>
+        </div>
+        <div class="note-box">
+            <strong>注意：</strong>除定向委托类外，如仅有一家单位申报，原则上不进入项目评审。鼓励联合申报、协同攻关。
+        </div>
+    </div>
+
+    <!-- Requirements: Units -->
+    <div class="section">
+        <h3 class="section-title">申报条件 &mdash; 申报单位要求</h3>
+        <div class="req-block">
+            <h4>&#127970; 基本资格</h4>
+            <ul class="req-list">
+                <li>在宁波市注册登记，具有<strong>独立法人资格</strong>的企业、高校、科研院所等单位</li>
+                <li>具备实施项目的研发场地、人才条件和研发基础</li>
+                <li>有健全的科研管理、财务管理和知识产权管理制度</li>
+                <li>政府机关原则上<strong>不得</strong>牵头或参与申报</li>
+            </ul>
+        </div>
+        <div class="req-block">
+            <h4>&#127963; 企业申报特别要求</h4>
+            <ul class="req-list">
+                <li>须设立并正常运营<strong>1年以上</strong>（2025年4月13日及之前注册）</li>
+                <li>原则上须建有<strong>市级及以上企业研发机构</strong>（2021年后成立的企业暂不要求）</li>
+                <li>企业须满足以下<strong>任一条件</strong>：
+                    <br>&bull; 有效期内的高新技术企业、"瞪羚之星"、专精特新"小巨人"等认定企业
+                    <br>&bull; 2025年度研发经费内部支出 &ge; 500万元，或 &ge; 300万元且占管理费用比例 &ge; 30%
+                </li>
+                <li>同一指南同一单位<strong>只能牵头申报1项</strong></li>
+            </ul>
+        </div>
+        <div class="req-block">
+            <h4>&#128202; 限项要求</h4>
+            <ul class="req-list">
+                <li>研发费用 &lt; 5000万：在研+申报累计 <strong>&le; 2项</strong></li>
+                <li>研发费用 5000万~1亿：累计 <strong>&le; 3项</strong>（每增5000万可+1项）</li>
+                <li>研发费用 &gt; 5亿 或 获国家技术创新中心认定：<strong>不限</strong></li>
+                <li>"瞪羚之星"企业牵头申报：数量原则上<strong>不受限制</strong></li>
+            </ul>
+        </div>
+        <div class="note-box">
+            <strong>重要提醒：</strong>企业研发经费内部支出 = 研究开发费用 - 无形资产摊销费用 - 折旧费用与长期待摊费用 - 委托外部研究开发费用 + 当年形成用于研究开发的仪器设备费用。立项后若核准不足将<strong>取消立项资格、追回拨款</strong>。
+        </div>
+    </div>
+
+    <!-- Requirements: PIs -->
+    <div class="section">
+        <h3 class="section-title">申报条件 &mdash; 项目负责人要求</h3>
+        <ul class="req-list">
+            <li>项目第1位负责人须为<strong>实际主持研究</strong>的科技人员，在相关领域有较高学术地位或技术优势</li>
+            <li>前3位负责人须与承担单位签订<strong>劳动合同</strong>，合同期限需覆盖项目执行期</li>
+            <li>前3位负责人在研+申报项目累计<strong>不超过2项</strong></li>
+            <li>前3位负责人中途退出原在研项目的，在原项目验收通过前<strong>不得</strong>参与申报</li>
+            <li class="warn">存在逾期项目未处理的，不得作为前3位负责人</li>
+        </ul>
+    </div>
+
+    <!-- Funding -->
+    <div class="section">
+        <h3 class="section-title">资金要求要点</h3>
+        <div class="fund-grid">
+            <div class="fund-item">
+                <h4>联合出资 <span class="badge badge-blue">鼓励</span></h4>
+                <p>鼓励属地、高校院所、社会资本等共同投入。联合出资情况作为<strong>评审立项的重要因素</strong>。企业牵头项目须按指南要求投入自筹经费。</p>
+            </div>
+            <div class="fund-item">
+                <h4>支持数量</h4>
+                <p>原则上同一指南立项不超过1项。技术路线明显不同且评审优良的，可视情支持多项。</p>
+            </div>
+            <div class="fund-item">
+                <h4>资金保障 <span class="badge badge-red">注意</span></h4>
+                <p>企业2025年度营业收入（或研发费用）不低于申请资助金额的<strong>2倍</strong>。自筹经费在实施过程中<strong>不得调减</strong>。外拨合作单位金额占比不超过50%。</p>
+            </div>
+            <div class="fund-item">
+                <h4>经费追溯</h4>
+                <p>项目申报前已发生的研发投入可追溯确认为自筹资金，追溯期最长12个月（可追溯至<strong>2025年4月1日</strong>）。</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Timeline -->
+    <div class="section">
+        <h3 class="section-title">工作流程与关键时间节点</h3>
+        <div class="timeline">
+            <div class="timeline-item active">
+                <div class="timeline-dot"></div>
+                <div class="timeline-title">指南查看</div>
+                <div class="timeline-date">4月15日 12:00 起</div>
+                <div class="timeline-desc">登录"宁波科技大脑"（stbrain.kjj.ningbo.gov.cn），进入工作台查看项目指南。</div>
+            </div>
+            <div class="timeline-item active">
+                <div class="timeline-dot"></div>
+                <div class="timeline-title">网上申报</div>
+                <div class="timeline-date">4月15日 12:00 &mdash; 5月11日 17:00</div>
+                <div class="timeline-desc">登录"宁波科技大脑"在线填报，上传相关附件。新用户需先注册。</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-title">归口审核</div>
+                <div class="timeline-date">5月13日 17:00 前</div>
+                <div class="timeline-desc">归口管理单位审核材料真实性、完整性，通过浙政钉提交推荐函。纸质材料由单位自行留存。</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-title">形式审查</div>
+                <div class="timeline-date"></div>
+                <div class="timeline-desc">市科技局审核材料完整性、有效性，符合要求的进入评审程序。</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-title">专家评审</div>
+                <div class="timeline-date"></div>
+                <div class="timeline-desc">组织专家评审，必要时实地核查，结合产业发展目标研究确定拟立项项目。</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-title">社会公示</div>
+                <div class="timeline-date">公示7天</div>
+                <div class="timeline-desc">经社会公示无异议后予以发文立项。</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-title">签订合同</div>
+                <div class="timeline-date"></div>
+                <div class="timeline-desc">根据立项文件，在规定期限内与市科技局、归口管理单位签订三方合同任务书。</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Integrity -->
+    <div class="section">
+        <h3 class="section-title">科研诚信及伦理要求</h3>
+        <ul class="req-list">
+            <li>申报单位及团队成员无在惩戒期内的<strong>科研失信行为记录</strong></li>
+            <li>项目主要研发内容未获国家、省级、市级立项支持，<strong>不得多头申报或重复申报</strong></li>
+            <li>严格遵守《科学技术进步法》《科技伦理审查办法》等法律法规</li>
+            <li class="warn">数据造假将取消立项、追回拨款、列入不良信用记录</li>
+        </ul>
+    </div>
+
+    <!-- Contact -->
+    <div class="section">
+        <h3 class="section-title">官方联系方式</h3>
+        <div class="contact-grid">
+            <div class="contact-item">
+                <div class="c-label">网络技术咨询</div>
+                <div class="c-phone">87811024</div>
+            </div>
+            <div class="contact-item">
+                <div class="c-label">专项指南咨询（科技局）</div>
+                <div class="c-name">陈老师</div>
+                <div class="c-phone">89292528</div>
+            </div>
+            <div class="contact-item">
+                <div class="c-label">软件项目咨询（经信局）</div>
+                <div class="c-name">陈老师</div>
+                <div class="c-phone">89292009</div>
+            </div>
+            <div class="contact-item">
+                <div class="c-label">综合咨询（资监处）</div>
+                <div class="c-name">童老师</div>
+                <div class="c-phone">89186832</div>
+            </div>
+            <div class="contact-item">
+                <div class="c-label">综合咨询（生产力中心）</div>
+                <div class="c-name">周老师</div>
+                <div class="c-phone">87910893</div>
+            </div>
+            <div class="contact-item">
+                <div class="c-label">推荐函受理</div>
+                <div class="c-name">童老师</div>
+                <div class="c-phone">89186832</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-section">
+        <h3>需要专业申报辅导服务？</h3>
+        <p>宁波知宁技术服务有限公司为您提供全流程政策申报服务</p>
+        <p>从项目筛选、材料编制到申报跟踪，助力企业高效申报</p>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="company">宁波知宁技术服务有限公司 &nbsp;|&nbsp; ZHINING</div>
+        <p>&copy; 2026 宁波知宁技术服务有限公司 版权所有</p>
+    </div>
+</div>
+
+</body>
+</html>
