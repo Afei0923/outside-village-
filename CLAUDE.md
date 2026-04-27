@@ -25,8 +25,8 @@ python3 greeting.py
 
 ## Branch & PR workflow
 
-- Feature branches follow `claude/<task-slug>-<shortid>` (e.g. `claude/organize-workflow-N9JZQ`).
-- Work is merged into `main` via GitHub PR (see PR #1 as an example).
+- Feature branches follow `claude/<task-slug>-<shortid>` (e.g. `claude/add-chinese-greeting-MyrwC`, `claude/add-claude-documentation-j2oiV`).
+- Work is merged into `main` via GitHub PR (PR #1 added the webpage, PR #3 added this CLAUDE.md).
 - Never push directly to `main`.
 
 ## Editing notes
