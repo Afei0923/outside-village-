@@ -101,9 +101,37 @@
       <rect x="40" y="40" width="670" height="920" rx="10" fill="none" stroke="url(#gold)" stroke-width="1" stroke-opacity="0.55"/>
 
       <!-- 顶部祥云装饰 -->
-      <g fill="url(#gold)" opacity="0.9">
-        <path d="M70 92 q18 -22 40 -8 q12 -20 34 -6 q-4 18 -28 16 q-2 14 -24 8 q-16 4 -22 -10z"/>
-        <path d="M680 92 q-18 -22 -40 -8 q-12 -20 -34 -6 q4 18 28 16 q2 14 24 8 q16 4 22 -10z"/>
+      <g fill="url(#gold)" opacity="0.85">
+        <path d="M315 96 q18 -20 40 -7 q12 -18 34 -5 q-4 16 -27 14 q-2 13 -23 7 q-15 4 -24 -8z"/>
+        <path d="M435 96 q-18 -20 -40 -7 q-12 -18 -34 -5 q4 16 27 14 q2 13 23 7 q15 4 24 -8z"/>
+      </g>
+
+      <!-- 端午「门艾」：艾草菖蒲（左上角） -->
+      <g stroke="#2f5e16" stroke-width="1">
+        <path d="M85 188 Q70 112 80 62 Q92 116 95 188 Z" fill="url(#leaf)"/>
+        <path d="M92 188 Q97 100 116 58 Q105 116 102 188 Z" fill="url(#leafDark)"/>
+        <path d="M78 188 Q53 122 46 72 Q72 122 88 188 Z" fill="url(#leaf)"/>
+      </g>
+      <g transform="translate(70,176)">
+        <rect width="36" height="17" rx="7" fill="#a01f1a"/>
+        <rect width="36" height="5" fill="#f4c430"/>
+        <rect y="12" width="36" height="5" fill="#3a7fd5"/>
+        <path d="M6 17 q-3 14 2 24 M30 17 q3 14 -2 24" fill="none" stroke="#f4c430" stroke-width="2"/>
+      </g>
+
+      <!-- 端午「门艾」：艾草菖蒲（右上角，镜像） -->
+      <g transform="translate(750,0) scale(-1,1)">
+        <g stroke="#2f5e16" stroke-width="1">
+          <path d="M85 188 Q70 112 80 62 Q92 116 95 188 Z" fill="url(#leaf)"/>
+          <path d="M92 188 Q97 100 116 58 Q105 116 102 188 Z" fill="url(#leafDark)"/>
+          <path d="M78 188 Q53 122 46 72 Q72 122 88 188 Z" fill="url(#leaf)"/>
+        </g>
+        <g transform="translate(70,176)">
+          <rect width="36" height="17" rx="7" fill="#a01f1a"/>
+          <rect width="36" height="5" fill="#f4c430"/>
+          <rect y="12" width="36" height="5" fill="#3a7fd5"/>
+          <path d="M6 17 q-3 14 2 24 M30 17 q3 14 -2 24" fill="none" stroke="#f4c430" stroke-width="2"/>
+        </g>
       </g>
 
       <!-- 主标题 端午安康 -->
@@ -132,28 +160,10 @@
         <text x="14" y="-26" font-family="STKaiti,'KaiTi',serif" font-size="22" fill="#a01f1a" font-weight="700">宁</text>
       </g>
 
-      <!-- 粽子 左 -->
-      <g transform="translate(150,500) rotate(-12)">
-        <path d="M0 -46 L46 30 L-46 30 Z" fill="url(#leaf)" stroke="#2f5e16" stroke-width="2"/>
-        <path d="M0 -46 L18 30 L-46 30 Z" fill="url(#leafDark)"/>
-        <path d="M0 -46 L0 30" stroke="#2f5e16" stroke-width="1.5" opacity="0.6"/>
-        <g stroke="#f4c430" stroke-width="3" fill="none">
-          <path d="M-30 -2 L30 -2"/>
-          <path d="M-22 12 L22 12"/>
-          <path d="M-10 -28 L20 4"/>
-        </g>
-      </g>
-
-      <!-- 粽子 右 -->
-      <g transform="translate(600,500) rotate(12)">
-        <path d="M0 -46 L46 30 L-46 30 Z" fill="url(#leaf)" stroke="#2f5e16" stroke-width="2"/>
-        <path d="M0 -46 L18 30 L-46 30 Z" fill="url(#leafDark)"/>
-        <path d="M0 -46 L0 30" stroke="#2f5e16" stroke-width="1.5" opacity="0.6"/>
-        <g stroke="#f4c430" stroke-width="3" fill="none">
-          <path d="M-30 -2 L30 -2"/>
-          <path d="M-22 12 L22 12"/>
-          <path d="M10 -28 L-20 4"/>
-        </g>
+      <!-- 江面水波（龙舟竞渡） -->
+      <g fill="none" stroke="#fbe29a" stroke-linecap="round" opacity="0.5">
+        <path d="M150 394 q20 -11 40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0" stroke-width="2.5"/>
+        <path d="M175 410 q20 -10 40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0" stroke-width="2" opacity="0.7"/>
       </g>
 
       <!-- ============ 通知正文卡片 ============ -->
@@ -172,6 +182,39 @@
           <tspan x="124" y="772">　　假期给您带来的不便，敬请谅解！</tspan>
           <tspan x="124" y="808">恭祝大家 端午安康、阖家幸福！</tspan>
         </text>
+      </g>
+
+      <!-- 五彩绳粽子 · 压在卡片左上角 -->
+      <g transform="translate(108,432) rotate(-16)">
+        <path d="M0 -34 q26 6 34 28 q-34 14 -68 0 q8 -22 34 -28z" fill="url(#leaf)" stroke="#2f5e16" stroke-width="1.5"/>
+        <path d="M0 -34 q-26 6 -34 28 q18 8 34 6z" fill="url(#leafDark)"/>
+        <g stroke="#f4c430" stroke-width="2.5" fill="none" stroke-linecap="round">
+          <path d="M-26 -2 L26 -2"/>
+          <path d="M-20 10 L20 10"/>
+          <path d="M-8 -22 L16 2"/>
+        </g>
+        <!-- 五彩绳 -->
+        <g stroke-width="2.5" fill="none" stroke-linecap="round">
+          <path d="M0 -34 q-10 -22 -4 -40" stroke="#a01f1a"/>
+          <path d="M0 -34 q-2 -24 4 -42" stroke="#f4c430"/>
+          <path d="M0 -34 q6 -22 12 -40" stroke="#3a7fd5"/>
+        </g>
+      </g>
+
+      <!-- 五彩绳粽子 · 压在卡片右上角 -->
+      <g transform="translate(642,432) rotate(16)">
+        <path d="M0 -34 q26 6 34 28 q-34 14 -68 0 q8 -22 34 -28z" fill="url(#leaf)" stroke="#2f5e16" stroke-width="1.5"/>
+        <path d="M0 -34 q26 6 34 28 q-18 8 -34 6z" fill="url(#leafDark)"/>
+        <g stroke="#f4c430" stroke-width="2.5" fill="none" stroke-linecap="round">
+          <path d="M-26 -2 L26 -2"/>
+          <path d="M-20 10 L20 10"/>
+          <path d="M8 -22 L-16 2"/>
+        </g>
+        <g stroke-width="2.5" fill="none" stroke-linecap="round">
+          <path d="M0 -34 q10 -22 4 -40" stroke="#a01f1a"/>
+          <path d="M0 -34 q2 -24 -4 -42" stroke="#f4c430"/>
+          <path d="M0 -34 q-6 -22 -12 -40" stroke="#3a7fd5"/>
+        </g>
       </g>
 
       <!-- ============ 公司署名 + Logo ============ -->
