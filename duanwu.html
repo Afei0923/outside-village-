@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>端午节放假通知 · 朋友圈分享图</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: "PingFang SC", "Microsoft YaHei", "Hiragino Sans GB", sans-serif;
+    background: #2b1410;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 12px 48px;
+    color: #fff;
+  }
+  .toolbar {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .toolbar button {
+    background: linear-gradient(135deg, #f4c430, #e0a020);
+    color: #6b1410;
+    border: none;
+    padding: 12px 26px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 999px;
+    cursor: pointer;
+    box-shadow: 0 6px 16px rgba(0,0,0,.35);
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .toolbar button:hover { transform: translateY(-2px); box-shadow: 0 10px 22px rgba(0,0,0,.45); }
+  .toolbar button:active { transform: translateY(0); }
+  .hint { font-size: 13px; color: #d9b48f; margin-bottom: 18px; text-align: center; line-height: 1.7; }
+  .stage {
+    width: 100%;
+    max-width: 420px;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 18px 50px rgba(0,0,0,.5);
+  }
+  .stage svg { display: block; width: 100%; height: auto; }
+</style>
+</head>
+<body>
+
+  <div class="toolbar">
+    <button id="saveBtn">⬇️ 保存为图片</button>
+  </div>
+  <div class="hint">
+    手机端：长按下方图片即可「保存图片 / 发送给朋友」<br>
+    电脑端：点击上方按钮下载 PNG，再上传到朋友圈
+  </div>
+
+  <div class="stage">
+    <!-- ============ 海报 SVG（750×1000，纯矢量，可直接导出 PNG） ============ -->
+    <svg id="poster" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 1000">
+      <defs>
+        <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%"  stop-color="#a01f1a"/>
+          <stop offset="55%" stop-color="#c0352a"/>
+          <stop offset="100%" stop-color="#7d1410"/>
+        </linearGradient>
+        <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#fbe29a"/>
+          <stop offset="50%" stop-color="#f4c430"/>
+          <stop offset="100%" stop-color="#d99a16"/>
+        </linearGradient>
+        <linearGradient id="leaf" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#6fae3d"/>
+          <stop offset="100%" stop-color="#3f7a1f"/>
+        </linearGradient>
+        <linearGradient id="leafDark" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#5b962f"/>
+          <stop offset="100%" stop-color="#2f5e16"/>
+        </linearGradient>
+        <radialGradient id="glow" cx="50%" cy="38%" r="60%">
+          <stop offset="0%" stop-color="#ffffff" stop-opacity="0.18"/>
+          <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+        </radialGradient>
+        <!-- 知宁 Logo -->
+        <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%"  stop-color="#5cb3f0"/>
+          <stop offset="50%" stop-color="#3a7fd5"/>
+          <stop offset="100%" stop-color="#1a3a6b"/>
+        </linearGradient>
+      </defs>
+
+      <!-- 背景 -->
+      <rect width="750" height="1000" fill="url(#bg)"/>
+      <rect width="750" height="1000" fill="url(#glow)"/>
+
+      <!-- 描边外框 -->
+      <rect x="28" y="28" width="694" height="944" rx="16" fill="none" stroke="url(#gold)" stroke-width="3"/>
+      <rect x="40" y="40" width="670" height="920" rx="10" fill="none" stroke="url(#gold)" stroke-width="1" stroke-opacity="0.55"/>
+
+      <!-- 顶部祥云装饰 -->
+      <g fill="url(#gold)" opacity="0.9">
+        <path d="M70 92 q18 -22 40 -8 q12 -20 34 -6 q-4 18 -28 16 q-2 14 -24 8 q-16 4 -22 -10z"/>
+        <path d="M680 92 q-18 -22 -40 -8 q-12 -20 -34 -6 q4 18 28 16 q2 14 24 8 q16 4 22 -10z"/>
+      </g>
+
+      <!-- 主标题 端午安康 -->
+      <text x="375" y="210" text-anchor="middle" font-family="STKaiti,'KaiTi','Songti SC',serif"
+            font-size="118" font-weight="700" fill="url(#gold)"
+            stroke="#7d1410" stroke-width="2" paint-order="stroke">端午安康</text>
+
+      <!-- 副标题 拼音/英文 -->
+      <text x="375" y="252" text-anchor="middle" font-family="Arial,sans-serif"
+            font-size="22" letter-spacing="8" fill="#fbe29a" opacity="0.85">D R A G O N   B O A T   F E S T I V A L</text>
+
+      <!-- 装饰：粽子 + 龙舟 -->
+      <!-- 龙舟 -->
+      <g transform="translate(375,330)">
+        <!-- 船身 -->
+        <path d="M-180 18 q180 60 360 0 q-30 38 -180 38 q-150 0 -180 -38z" fill="#3a2a18" stroke="url(#gold)" stroke-width="2"/>
+        <path d="M-180 18 q180 50 360 0" fill="none" stroke="url(#gold)" stroke-width="3"/>
+        <!-- 龙头 -->
+        <path d="M180 18 q34 -8 40 -34 q14 6 8 22 q14 -2 12 12 q10 4 2 16 q-30 6 -62 -2z" fill="url(#gold)" stroke="#7d1410" stroke-width="1.5"/>
+        <circle cx="206" cy="2" r="4" fill="#7d1410"/>
+        <!-- 龙尾 -->
+        <path d="M-180 18 q-26 -10 -40 -2 q14 10 6 22 q22 2 40 -6z" fill="url(#gold)" stroke="#7d1410" stroke-width="1.5"/>
+        <!-- 旗帜 -->
+        <line x1="0" y1="22" x2="0" y2="-46" stroke="url(#gold)" stroke-width="3"/>
+        <path d="M0 -46 l46 12 l-46 12z" fill="#fbe29a"/>
+        <text x="14" y="-26" font-family="STKaiti,'KaiTi',serif" font-size="22" fill="#a01f1a" font-weight="700">宁</text>
+      </g>
+
+      <!-- 粽子 左 -->
+      <g transform="translate(150,500) rotate(-12)">
+        <path d="M0 -46 L46 30 L-46 30 Z" fill="url(#leaf)" stroke="#2f5e16" stroke-width="2"/>
+        <path d="M0 -46 L18 30 L-46 30 Z" fill="url(#leafDark)"/>
+        <path d="M0 -46 L0 30" stroke="#2f5e16" stroke-width="1.5" opacity="0.6"/>
+        <g stroke="#f4c430" stroke-width="3" fill="none">
+          <path d="M-30 -2 L30 -2"/>
+          <path d="M-22 12 L22 12"/>
+          <path d="M-10 -28 L20 4"/>
+        </g>
+      </g>
+
+      <!-- 粽子 右 -->
+      <g transform="translate(600,500) rotate(12)">
+        <path d="M0 -46 L46 30 L-46 30 Z" fill="url(#leaf)" stroke="#2f5e16" stroke-width="2"/>
+        <path d="M0 -46 L18 30 L-46 30 Z" fill="url(#leafDark)"/>
+        <path d="M0 -46 L0 30" stroke="#2f5e16" stroke-width="1.5" opacity="0.6"/>
+        <g stroke="#f4c430" stroke-width="3" fill="none">
+          <path d="M-30 -2 L30 -2"/>
+          <path d="M-22 12 L22 12"/>
+          <path d="M10 -28 L-20 4"/>
+        </g>
+      </g>
+
+      <!-- ============ 通知正文卡片 ============ -->
+      <g>
+        <rect x="80" y="430" width="590" height="392" rx="18" fill="#fff8ec" stroke="url(#gold)" stroke-width="2"/>
+        <text x="375" y="486" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif"
+              font-size="40" font-weight="800" fill="#a01f1a" letter-spacing="6">放 假 通 知</text>
+        <line x1="270" y1="506" x2="480" y2="506" stroke="#d99a16" stroke-width="2"/>
+
+        <text font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="25" fill="#3a2a18">
+          <tspan x="124" y="560">尊敬的客户及全体同仁：</tspan>
+          <tspan x="124" y="606">　　根据国家法定节假日安排，本公司</tspan>
+          <tspan x="124" y="646">端午节放假时间为 </tspan><tspan font-weight="800" fill="#a01f1a">2026年6月19日</tspan>
+          <tspan x="124" y="686">至 </tspan><tspan font-weight="800" fill="#a01f1a">2026年6月21日</tspan><tspan fill="#3a2a18">，共3天；</tspan>
+          <tspan x="124" y="726">6月22日（下周一）正常上班。</tspan>
+          <tspan x="124" y="772">　　假期给您带来的不便，敬请谅解！</tspan>
+          <tspan x="124" y="808">恭祝大家 端午安康、阖家幸福！</tspan>
+        </text>
+      </g>
+
+      <!-- ============ 公司署名 + Logo ============ -->
+      <g transform="translate(0,852)">
+        <!-- Logo（来自 assets/logo.svg，内联绘制） -->
+        <g transform="translate(196,0) scale(0.42)">
+          <polygon points="55,25 170,25 145,145 30,145" fill="url(#logoGrad)"/>
+          <polygon points="70,45 150,45 145,60 65,60" fill="rgba(255,255,255,0.95)"/>
+          <polygon points="135,45 150,45 80,130 65,130" fill="rgba(255,255,255,0.95)"/>
+          <polygon points="125,115 140,115 135,130 120,130" fill="rgba(255,255,255,0.95)"/>
+          <polygon points="65,60 80,60 75,130 60,130" fill="rgba(255,255,255,0.95)"/>
+          <polygon points="130,60 145,60 140,130 125,130" fill="rgba(255,255,255,0.95)"/>
+        </g>
+        <!-- 公司名称与日期 -->
+        <text x="300" y="46" font-family="'PingFang SC','Microsoft YaHei',sans-serif"
+              font-size="30" font-weight="700" fill="#fbe29a">宁波知宁技术服务有限公司</text>
+        <text x="300" y="86" font-family="'PingFang SC','Microsoft YaHei',sans-serif"
+              font-size="22" fill="#f0d6a8" opacity="0.92">2026 年 6 月 18 日</text>
+      </g>
+    </svg>
+    <!-- ============ /海报 SVG ============ -->
+  </div>
+
+  <script>
+    // 将矢量海报导出为高清 PNG（纯前端、可离线运行）
+    document.getElementById('saveBtn').addEventListener('click', function () {
+      var svg = document.getElementById('poster');
+      var scale = 2; // 2 倍清晰度 -> 1500×2000
+      var w = 750, h = 1000;
+
+      var clone = svg.cloneNode(true);
+      clone.setAttribute('width', w);
+      clone.setAttribute('height', h);
+      var xml = new XMLSerializer().serializeToString(clone);
+      var svg64 = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(xml);
+
+      var img = new Image();
+      img.onload = function () {
+        var canvas = document.createElement('canvas');
+        canvas.width = w * scale;
+        canvas.height = h * scale;
+        var ctx = canvas.getContext('2d');
+        ctx.scale(scale, scale);
+        ctx.drawImage(img, 0, 0, w, h);
+        try {
+          var url = canvas.toDataURL('image/png');
+          var a = document.createElement('a');
+          a.href = url;
+          a.download = '端午节放假通知_知宁技术.png';
+          document.body.appendChild(a);
+          a.click();
+          document.body.removeChild(a);
+        } catch (e) {
+          alert('导出失败，请改用「长按图片保存」或截图方式。');
+        }
+      };
+      img.onerror = function () {
+        alert('导出失败，请改用「长按图片保存」或截图方式。');
+      };
+      img.src = svg64;
+    });
+  </script>
+</body>
+</html>
